@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'pmkautokeywords'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pages.tx_pmkautokeywords_autokeywords">Autokeywords (,):</label>
+			<label index="pages.tx_pmkautokeywords_useautokeywords">Use Autokeywords?</label>
+		</languageKey>
+		<languageKey index="dk" type="array">
+			<label index="pages.tx_pmkautokeywords_autokeywords">Auto nøgleord (,):</label>
+			<label index="pages.tx_pmkautokeywords_useautokeywords">Brug Auto nøgleord?</label>
+		</languageKey>
+	</data>
+</T3locallang>

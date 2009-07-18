@@ -1,0 +1,3 @@
+
+# cat=basic/other/a1; type=options[The custom "autokeywords" field=tx_pmkautokeywords_autokeywords,The original "keywords" field=keywords]; label=Field to hold the autokeywords?:The custom "autokeywords" field or the original "keywords" field.? (See manual for differences.)
+keywordfield = tx_pmkautokeywords_autokeywords

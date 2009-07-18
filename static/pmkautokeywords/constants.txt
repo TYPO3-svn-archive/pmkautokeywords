@@ -1,0 +1,7 @@
+plugin.tx_pmkautokeywords {
+	# cat=pmkautokeywords/links/1; type=small; label=Page object: The name of the "PAGE" object. Normally set to "page", but some German users prefer to set it to "seite".
+	pageObj = page
+
+	# cat=pmkautokeywords/links/2; type=text; label= Starting Point (pid_list): The PID of the page (or comma separated list of PIDs) where your news articles are located.
+	news_pid_list = 0
+}

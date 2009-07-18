@@ -1,0 +1,27 @@
+{$plugin.tx_pmkautokeywords.pageObj}.meta.keywords >
+{$plugin.tx_pmkautokeywords.pageObj}.meta.description >
+
+{$plugin.tx_pmkautokeywords.pageObj}.meta {
+	description.field = description
+	#description.override.if.isTrue.data = GPvar:tx_ttnews|tt_news
+	description.override.cObject = COA
+	description.override.cObject.if.isTrue.data = GPvar:tx_ttnews|tt_news
+	description.override.cObject.10 = CONTENT
+	description.override.cObject.10 {
+		table = tt_news
+		select {
+			languageField = sys_language_uid
+			pidInList = {$plugin.tx_pmkautokeywords.news_pid_list}
+			andWhere.data = GPvar:tx_ttnews|tt_news
+			andWhere.intval = 1
+			andWhere.wrap = uid=|
+		}
+		renderObj = TEXT
+		renderObj.field = short
+	}
+	
+	keywords.field = keywords
+	keywords.override < .description.override
+	keywords.override.cObject.10.renderObj.field = keywords
+}
+
