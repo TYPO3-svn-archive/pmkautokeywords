@@ -222,7 +222,7 @@
 			$wordList = array();
 			$stopwords = '';
 			if (isset($this->conf['stopwords.']['file.'][$typo3Lang])) {
-				$stopwords.= @file_get_contents(t3lib_div::getFileAbsFileName($this->conf['stopwords.']['file.'][$typo3Lang]));
+				$stopwords.= preg_replace('/\r\n|\r|\n/', ',', @file_get_contents(t3lib_div::getFileAbsFileName($this->conf['stopwords.']['file.'][$typo3Lang])));
 			}
 			else if (isset($this->conf['stopwords.'][$typo3Lang])) {
 				$stopwords.=','.$this->conf['stopwords.'][$typo3Lang];
