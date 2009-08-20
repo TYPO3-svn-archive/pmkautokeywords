@@ -145,7 +145,7 @@ class ext_update extends tx_pmkautokeywords {
 			)
 		);
 		// Process subpages
-		$pages = $this->getRecords('pages', 'deleted=0 AND hidden=0 AND (doktype=1 OR doktype=6 OR doktype=4 OR doktype=7) AND pid='.$uid);
+		$pages = $this->getRecords('pages', 'deleted=0 AND hidden=0 AND (doktype=1 OR doktype=6 OR doktype=4 OR doktype=7 OR doktype=254) AND pid='.$uid);
 		$indent.='&nbsp;&nbsp;&nbsp;';
 		foreach ($pages as $page) {
 				$out.=($page['doktype']==1 || $page['doktype']==6) ? $indent.$page['title'].'<br />' : $indent.'<em>'.$page['title'].'</em><br />';
